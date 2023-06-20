@@ -10,15 +10,15 @@ spec:
         - name: course
           valueFrom:
             configMapKeyRef:
-              name: course-config
+              name: courseconfig
               key: course
         - name: duration
           valueFrom:
             configMapKeyRef:
-              name: course-config
+              name: courseconfig
               key: duration
         - name: author
           valueFrom:
             configMapKeyRef:
-              name: course-config
+              name: courseconfig
               key: author
