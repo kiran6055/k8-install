@@ -1,9 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: courseconfig
+  name: courseconfig # this metadata name will be given in configmap.yaml uhnder configMapKeyReference name section
 data:
   course: docker
   duration: 30hrs
   author: kiran
   location: online
+
+# above course duration are environmental variable
