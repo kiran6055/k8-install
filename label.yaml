@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-lables
+  labels:
+    name: kiran
+    project: roboshop
+    client: ibm
+spec:
+  containers:
+    - image: tomcat
+      name: tomcat
