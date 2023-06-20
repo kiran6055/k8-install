@@ -4,7 +4,7 @@ metadata:
   name: courseconfig # this metadata name will be given in configmap.yaml uhnder configMapKeyReference name section
 data:
   course: docker
-  duration: 30hrs
+  duration: 45hrs
   author: kiran
   location: online
 
