@@ -6,19 +6,6 @@ spec:
   containers:
     - name: nginx
       image: nginx
-      env:
-        - name: course
-          valueFrom:
-            configMapKeyRef: # this is reference from config map in k8 documentation before this we need to run config.yaml file which is in configmap foler
-              name: courseconfig   # this is metadata nem in confimap folder inside that config yaml
-              key: course
-        - name: duration
-          valueFrom:
-            configMapKeyRef:
-              name: courseconfig
-              key: duration
-        - name: author
-          valueFrom:
-            configMapKeyRef:
-              name: courseconfig
-              key: author
+      envFrom:
+        configMapRef:
+          name:courseconfig
