@@ -25,4 +25,5 @@ spec:
   - image: nginx
     name: kirannginx
   - image: almalinux
+    imagePullPolicy: always
     name: alma
