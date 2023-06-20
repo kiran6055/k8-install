@@ -5,10 +5,10 @@ metadata:
 spec:
   containers:
   - image: nginx
-    name: radilive
+    name: nginx
     livenessProbe:
       httpGet:
-        path: /path
+        path: /
         port: 80
       initialDelaySeconds: 3
       periodSeconds: 5
