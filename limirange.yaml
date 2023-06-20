@@ -32,12 +32,5 @@ spec:
   containers:
   - image: nginx
     name: kirannginx
-    ports:
-      containerPort: 80
-    resources:
-      requests:
-        cpu: "150m"
-        memory: "200mi"
-      limits:
-        cpu: "200m"
-        memory: "300,mi"
+  - image: almalinux
+    name: alma
