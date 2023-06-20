@@ -9,8 +9,8 @@ spec:
       env:
         - name: course
           valueFrom:
-            configMapKeyRef:
-              name: courseconfig
+            configMapKeyRef: # this is reference from config map in k8 documentation before this we need to run config.yaml file which is in configmap foler
+              name: courseconfig   # this is metadata nem in confimap folder inside that config yaml
               key: course
         - name: duration
           valueFrom:
