@@ -5,7 +5,7 @@ metadata:
 data:
   course: docker
   duration: 45hrs
-  author: kiran
+  author: kirankumar
   location: online
 
 # above course duration are environmental variable
