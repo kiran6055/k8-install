@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: kiran
-  lables:
+  labels:
     name: ibm
     project: roboshop
     author: kiran
