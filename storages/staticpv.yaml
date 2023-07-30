@@ -25,6 +25,9 @@ spec:
     requests:
       storage: 10Gi  # Set the desired storage size
   volumeName: my-pv  # The name of the statically provisioned PersistentVolume
+  selector:
+    matchLabels:
+      name: my-ebc-pv
 ---
 apiVersion: v1
 kind: Pod
@@ -35,7 +38,7 @@ spec:
     - name: nginx
       image: nginx
       volumeMounts:
-        - name: my-ebs-volume
+        - name: my-ebs-pv
           mountPath: /usr/share/nginx/html  # Mount path inside the container
   volumes:
     - name: my-ebs-volume
