@@ -3,6 +3,7 @@ kind: PersistentVolume
 metadata:
   name: my-ebc-pv
 spec:
+  storageClassName: manual
   capacity:
     storage: 10Gi  # Set the desired storage size
   volumeMode: Filesystem
@@ -20,11 +21,11 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  storageClassName: ""  # Empty to prevent dynamic provisioning
+  storageClassName: manual
   resources:
     requests:
       storage: 10Gi  # Set the desired storage size
-  volumeName: my-pv  # The name of the statically provisioned PersistentVolume
+  volumeName: my-ebc-pv  # The name of the statically provisioned PersistentVolume
   selector:
     matchLabels:
       name: my-ebc-pv
