@@ -14,7 +14,7 @@ parameters:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: my-ebs-Dpvc
+  name: my-ebs-dynamicpvc
 spec:
   storageClassName: ebs-sc
   accessModes:
@@ -37,5 +37,5 @@ spec:
   volumes:
     - name: my-ebs-pv
       persistentVolumeClaim:
-        claimName: my-ebs-Dpvc
+        claimName: my-ebs-dynamicpvc
 
