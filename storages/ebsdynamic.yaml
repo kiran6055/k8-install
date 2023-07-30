@@ -6,7 +6,6 @@ metadata:
   name: ebs-sc
 provisioner: ebs.csi.aws.com
 reclaimPolicy: Retain
-allowVolumeExpansion: true
 volumeBindingMode: WaitForFirstConsumer
 parameters:
   type: g2
@@ -32,10 +31,10 @@ spec:
     - name: nginx
       image: nginx
       volumeMounts:
-        - name: my-ebs-pv
+        - name: my-ebs-volume
           mountPath: /usr/share/nginx/html  # Mount path inside the container
   volumes:
-    - name: my-ebs-pv
+    - name: my-ebs-volume
       persistentVolumeClaim:
         claimName: my-ebs-dynamicpvc
 
