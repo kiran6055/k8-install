@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-ebc-pv
+spec:
+  capacity:
+    storage: 10Gi  # Set the desired storage size
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  awsElasticBlockStore:
+    volumeID: vol-0bea162a523873b0e
+    fsType: ext4  # or the desired file system type
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-ebs-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ""  # Empty to prevent dynamic provisioning
+  resources:
+    requests:
+      storage: 10Gi  # Set the desired storage size
+  volumeName: my-pv  # The name of the statically provisioned PersistentVolume
