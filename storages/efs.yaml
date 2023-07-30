@@ -15,7 +15,7 @@ parameters:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: efs-claim1
+  name: efs-claim2
 spec:
   accessModes:
     - ReadWriteMany
@@ -33,9 +33,9 @@ spec:
   - name: app
     image: nginx
     volumeMounts:
-    - name: efs-volume1
+    - name: efs-volume2
       mountPath: /data
   volumes:
   - name: efs-volume1
     persistentVolumeClaim:
-      claimName: efs-claim1
+      claimName: efs-claim2
