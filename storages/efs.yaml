@@ -32,8 +32,6 @@ spec:
   containers:
   - name: app
     image: nginx
-    command: ["/bin/sh"]
-    args: ["-c", "while true; do echo $(date -u) >> /data-dir1/out.txt; sleep 5; done"]
     volumeMounts:
     - name: efs-volume1
       mountPath: /data
