@@ -14,5 +14,5 @@ spec:
               - web
 
   containers:
-  - name: ubuntu
-    image: ubuntu
+  - name: tomcat
+    image: tomcat
