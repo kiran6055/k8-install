@@ -6,8 +6,8 @@ metadata:
     name: catalogue
 spec:
   containers:
-  - name: podantiaffinity-nginx
-    image: nginx
+  - name: podantiaffinity-tomcat
+    image: tomcat
 ---
 apiVersion: v1
 kind: Pod
@@ -25,6 +25,6 @@ spec:
             - catalogue
         topologyKey: topology.kubernetes.io/zone
   containers:
-  - name: tomcat
-    image: tomcat
+  - name: nginx
+    image: nginx
 
