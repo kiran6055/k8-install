@@ -11,7 +11,7 @@ spec:
           - key: tier
             operator: NotIn
             values:
-            - web
+              - web
 
   containers:
   - name: ubuntu
