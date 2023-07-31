@@ -12,7 +12,6 @@ spec:
             operator: NotIn
             values:
             - frontend
-
   containers:
   - name: tomcat
     image: tomcat
