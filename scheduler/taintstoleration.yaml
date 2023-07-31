@@ -10,7 +10,7 @@ spec:
     image: nginx
     imagePullPolicy: Always
   tolerations:
-  - key: tier
-    value: DB
+  - key: "tier"
+    value: "DB"
     operator: "Equal"
     effect: "NoSchedule"
