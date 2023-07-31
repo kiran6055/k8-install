@@ -11,7 +11,7 @@ spec:
           - key: tier
             operator: NotIn
             values:
-              - frontend
+            - frontend
 
   containers:
   - name: tomcat
