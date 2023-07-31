@@ -3,7 +3,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   namespace: roboshop
-  name: eoboshop-developer-readonly
+  name: roboshop-developer-readonly
 rules:
 - apiGroups: ["*"] # "" indicates the core API group
   resources: ["deployments", "services", "secrets", "replicasets", "configmap", "daemonset"]
