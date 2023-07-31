@@ -11,6 +11,8 @@ data:
    username: roboshop
    userarn: arn:aws:iam::505159336758:user/ramesh
    username: ramesh
+   userarn: arn:aws:iam::505159336758:user/developer
+   username: developer
 kind: ConfigMap
 metadata:
   annotations:
