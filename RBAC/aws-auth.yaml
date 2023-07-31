@@ -8,7 +8,7 @@ data:
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
    userarn: arn:aws:iam::505159336758:user/roboshop
-   username: roboshop 
+   username: roboshop
 kind: ConfigMap
 metadata:
   creationTimestamp: "2023-07-31T06:22:29Z"
@@ -16,4 +16,3 @@ metadata:
   namespace: kube-system
   resourceVersion: "1217"
   uid: e54aebd2-ea51-45ca-bee3-37f290676c4f
-
