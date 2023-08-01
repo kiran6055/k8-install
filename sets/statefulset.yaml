@@ -17,7 +17,7 @@ metadata:
     app: tomcat
 spec:
   ports:
-  - port: 80
+  - port: 8080
     name: web
   clusterIP: None # this is called as headless service
   selector:
@@ -44,7 +44,7 @@ spec:
       - name: tomcat
         image: tomcat
         ports:
-        - containerPort: 80
+        - containerPort: 8080
           name: web
         volumeMounts:
         - name: statefulebc
@@ -58,3 +58,5 @@ spec:
       resources:
         requests:
           storage: 1Gi
+
+
