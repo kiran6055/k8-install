@@ -12,16 +12,16 @@ parameters:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: tomcat
   labels:
-    app: nginx
+    app: tomcat
 spec:
   ports:
   - port: 80
     name: web
   clusterIP: None # this is called as headless service
   selector:
-    app: nginx
+    app: tomcat
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -30,25 +30,25 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: nginx # has to match .spec.template.metadata.labels
-  serviceName: "nginx"
+      app: tomcat # has to match .spec.template.metadata.labels
+  serviceName: "tomcat"
   replicas: 3 # by default is 1
   minReadySeconds: 10 # by default is 0
   template:
     metadata:
       labels:
-        app: nginx # has to match .spec.selector.matchLabels
+        app: tomcat # has to match .spec.selector.matchLabels
     spec:
       terminationGracePeriodSeconds: 10
       containers:
-      - name: nginx
-        image: nginx
+      - name: tomcat
+        image: tomcat
         ports:
         - containerPort: 80
           name: web
         volumeMounts:
         - name: statefulebc
-          mountPath: /usr/share/nginx/html
+          mountPath: /data
   volumeClaimTemplates:
   - metadata:
       name: statefulebc
